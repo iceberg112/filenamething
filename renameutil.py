@@ -7,7 +7,7 @@ def remove_text_from_filenames():
     text_to_remove = entry.get()
     
     if not text_to_remove:
-        messagebox.showwarning("Input Error", "Please enter the text to remove.")
+        messagebox.showwarning("input error", "space can't be blank!!!!!!!!!!!!!!!")
         return
     
     # direcotery
@@ -27,19 +27,19 @@ def remove_text_from_filenames():
             # rename
             os.rename(old_file_path, new_file_path)
     
-    messagebox.showinfo("Success", "Text has been removed from filenames!")
+    messagebox.showinfo("woohoo", "done!")
 
 # window
 root = tk.Tk()
-root.title("Remove Text from Filenames")
+root.title("hi")
 
-label = tk.Label(root, text="Enter text to remove from filenames:")
+label = tk.Label(root, text="text to be removed:")
 label.pack(pady=10)
 
 entry = tk.Entry(root, width=50)
 entry.pack(pady=10)
 
-button = tk.Button(root, text="Remove Text", command=remove_text_from_filenames)
+button = tk.Button(root, text="remove", command=remove_text_from_filenames)
 button.pack(pady=20)
 
 # start gui
